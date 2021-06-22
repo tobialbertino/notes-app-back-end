@@ -1,4 +1,5 @@
 node_modules
-notes-api-web-server.pem
+notes-api-webserver.pem
+new_user_credentials.csv
 .env
 .prod.env
