@@ -3,3 +3,4 @@ notes-api-webserver.pem
 new_user_credentials.csv
 .env
 .prod.env
+src/api/uploads/file
