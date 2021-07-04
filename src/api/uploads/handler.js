@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+const { S3 } = require('aws-sdk');
 const ClientError = require('../../exceptions/ClientError');
 
 class UploadsHandler {
@@ -23,6 +25,29 @@ class UploadsHandler {
       });
       response.code(201);
       return response;
+
+      // jika menggunakan Amazon S3
+      /*
+      const response = h.response({
+        status: 'success',
+        data: {
+          fileLocation: filename,
+        },
+      });
+      response.code(201);
+      return response;
+      // atau
+      const fileLocation = await this._service.writeFile(data, data.hapi);
+
+      const response = h.response({
+        status: 'success',
+        data: {
+          fileLocation,
+        },
+      });
+      response.code(201);
+      return response;
+      */
     } catch (error) {
       if (error instanceof ClientError) {
         const response = h.response({
